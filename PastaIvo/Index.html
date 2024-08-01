@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/PastaIvo/css/style.css">
+    <link rel="stylesheet" href="/PastaIvo/css/quantity.css">
 </head>
 <body>
     <div class="container">
@@ -24,22 +25,40 @@
                     <div class="img-option">
                         <img src="/assets/bife.jpg" alt="Bife" height="100%" width="100%">
                     </div>
-                    <p>Bife com Batata</p>
-                    <span>R$ 30,00</span>
+                    <p id="nameProduct1">Bife com Batata</p>
+                    <span id="price1">R$ 30,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="1" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card-option">
                     <div class="img-option">
                         <img src="/assets/coxa.jpg" alt="Frango Crocante" height="100%" width="100%">
                     </div>
-                    <p>Coxa de Frango Crocante</p>
-                    <span>R$ 25,00</span>
+                    <p id="nameProduct2">Coxa de Frango Crocante</p>
+                    <span id="price2">R$ 25,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="2" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
                 <div class="card-option">
                     <div class="img-option">
                         <img src="/assets/panela.jpg" alt="Carne de Panela" height="100%" width="100%">
                     </div>
-                    <p>Carne de Panela</p>
-                    <span>R$ 22,00</span>
+                    <p id="nameProduct3">Carne de Panela</p>
+                    <span id="price3">R$ 22,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="3" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,24 +72,40 @@
                     <div class="img-option">
                         <img src="/assets/farofa.jpg" alt="Farofa" height="100%" width="100%">
                     </div>
-                    <p>Farofa</p>
-                    <span>R$ 10,00</span>
+                    <p id="nameProduct4">Farofa</p>
+                    <span id="price4">R$ 10,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="4" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
-
                 <div class="card-option">
                     <div class="img-option">
                         <img src="/assets/salad.jpg" alt="Salada" height="100%" width="100%">
                     </div>
-                    <p>Salada</p>
-                    <span>R$ 8,00</span>
+                    <p id="nameProduct5">Salada</p>
+                    <span id="price5">R$ 8,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="5" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
-                
                 <div class="card-option">
                     <div class="img-option">
                         <img src="/assets/torresmo.jpg" alt="Torresmo" height="100%" width="100%">
                     </div>
-                    <p>Torresmo</p>
-                    <span>R$ 12,00</span>
+                    <p id="nameProduct6">Torresmo</p>
+                    <span id="price6">R$ 12,00</span>
+                    <div class="quantity buttons_added">
+                        <input type="button" value="-" class="minus">
+                        <input type="number" step="1" min="0" max="" id="6" name="quantity" value="0" title="Qty"
+                            class="input-text qty text" size="4" pattern="" inputmode="">
+                        <input type="button" value="+" class="plus">
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,15 +114,22 @@
                 Dados Pessoais
             </div>
             <div class="form-data">
-                <input type="name">
-                <input type="number">
-                <input type="email">
+                <input id="name" type="text" placeholder="Digite seu nome">
+                <input id="telefone" type="text" placeholder="Digite seu telefone">
+                <input id="email" type="email" placeholder="Digite seu email">
             </div>
         </div>
-        <button>Calcular</button>
-        <div class="order-summary">
+        <button onclick="gerarResumo()">Calcular</button>
+        <div id="order-summary" class="order-summary">
 
         </div>
     </div>
+
+
+    <script src="/PastaIvo/js/jquery-3.6.0.min.js"></script>
+    <script src="/PastaIvo/js/jquery.mask.min.js"></script>
+    <script src="/PastaIvo/js/quantity.js"></script>
+
+    <script src="/PastaIvo/js/JavaScript.js"></script>
 </body>
 </html>
